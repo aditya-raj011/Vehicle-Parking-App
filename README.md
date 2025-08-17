@@ -53,35 +53,6 @@ A multi-user **Flask** web application that manages parking lots, parking spots,
 
 ---
 
-## 🚀 Getting Started (Local)
-
-1. **Clone**
-
-   ```bash
-   git clone https://github.com/aditya-raj011/Vehicle-Parking-App.git
-   cd Vehicle-Parking-App
-   ```
-2. **Create & activate venv**
-
-   ```bash
-   python -m venv venv
-   venv\Scripts\activate   # Windows
-   # source venv/bin/activate   # Mac/Linux
-   ```
-3. **Install dependencies**
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. **Run**
-
-   ```bash
-   flask run
-   ```
-5. Open: `http://127.0.0.1:5000/`
-
----
-
 ## 🔮 Future Improvements
 
 * 💳 Online payments
