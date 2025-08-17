@@ -1,34 +1,98 @@
+# 🚗 Parking App
 
-parking_app
-It is a multi-user app that manages different parking lots, parking spots and parked vehicles. Assume that this parking app is for 4-wheeler parking.
+A multi-user **Flask** web application that manages parking lots, parking spots, and parked vehicles. Designed for **4‑wheeler parking** with real-time updates for users and admins.
 
-📌 Features
-🔐 User Authentication (Register & Login with Flask)
-👥 Multi-User Support (Admin & Regular Users)
-📍 Parking Lot Management (Create, Edit, Delete Lots & Spots)
-🎫 Real-Time Spot Reservation & Status Tracking
-📊 Parking History with Cost & Time Records
+---
 
-🛠️ Technologies Utilized
-🔧 Backend Stack
-Flask – Handles routing and backend logic
-Flask-Login – Manages user sessions securely
-SQLAlchemy – ORM for database modeling and queries
-Python 3.12 – Core programming language
-🎨 Frontend Tools
-HTML, CSS, Bootstrap 5.0 – Design and responsiveness
-Jinja2 – Enables dynamic content rendering using templates
-🗄️ Database Technologies
-SQLite – Lightweight, file-based relational database
-SQLAlchemy – Used for database schema creation and interaction
-🧠 Application Roles & Functionalities
-👨‍💼 Administrator (Superuser)
-Has the ability to add, modify, or delete parking lots
-Can adjust the number of available parking spaces
-Monitors live status of all parking spots (available or booked)
-Does not require sign-up; initialized automatically during setup
-👤 Registered User
-Can sign up and log into the platform
-Views and selects available parking locations
-Is automatically assigned a free spot upon booking
-Has the option to release the reserved spot after use
+## 📌 Features
+
+* 🔐 **User Authentication** – Register & Login securely
+* 👥 **Multi-User Roles** – Admin and Regular Users
+* 📍 **Parking Lot Management** – Create, edit, delete lots & spots
+* 🎫 **Spot Reservation** – Real-time booking & status tracking
+* 📊 **Parking History** – Cost and duration records
+
+---
+
+## 🛠️ Technologies Used
+
+### 🔧 Backend
+
+* Flask – Routing & backend logic
+* Flask-Login – Secure session management
+* SQLAlchemy – ORM for database models & queries
+* Python 3.12 – Core language
+
+### 🎨 Frontend
+
+* HTML, CSS, Bootstrap 5.0 – Responsive UI
+* Jinja2 – Dynamic template rendering
+
+### 🗄️ Database
+
+* SQLite – Lightweight relational DB
+* SQLAlchemy – Schema & interaction
+
+---
+
+## 🧠 Roles & Functionalities
+
+### 👨‍💼 Administrator (Superuser)
+
+* Manage lots & spots (add/modify/delete)
+* Adjust available spaces
+* Monitor real-time spot status (available/booked)
+* Auto-created during setup (no manual signup)
+
+### 👤 Registered User
+
+* Sign up & log in
+* View available parking locations
+* Book and release spots
+* View parking history
+
+---
+
+## 🚀 Getting Started (Local)
+
+1. **Clone**
+
+   ```bash
+   git clone https://github.com/aditya-raj011/Vehicle-Parking-App.git
+   cd Vehicle-Parking-App
+   ```
+2. **Create & activate venv**
+
+   ```bash
+   python -m venv venv
+   venv\Scripts\activate   # Windows
+   # source venv/bin/activate   # Mac/Linux
+   ```
+3. **Install dependencies**
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. **Run**
+
+   ```bash
+   flask run
+   ```
+5. Open: `http://127.0.0.1:5000/`
+
+---
+
+## 🔮 Future Improvements
+
+* 💳 Online payments
+* 📱 Mobile-friendly layout
+* 📈 Analytics dashboard
+* 🌐 Multi-location support
+
+---
+
+## 👨‍💻 Author
+
+**Aditya Raj**
+GitHub: [https://github.com/aditya-raj011](https://github.com/aditya-raj011)
+
