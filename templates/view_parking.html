@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>View Parking Lot</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        #form-body {
+            height: auto;
+            max-width: 600px;
+            margin: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="main">
+        <div id="canvas">
+            <div id="form-body" class="mt-5">
+                <h4 class="text-center mb-4">View/Delete Parking Spot</h4>
+                <form action="/delete_spot/{{ spot.id }}" method="post">
+                    <div class="mb-3">
+                        <label for="id" class="form-label">ID :</label>
+                        <input type="text" class="form-control text-center" id="id" name="id" value="{{ spot.id }}"
+                            readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="status" class="form-label">Status :</label>
+                        <input type="text" class="form-control text-center text-uppercase fw-bold" id="status"
+                            name="status" value="{{ spot.status }}" readonly
+                            onclick="if(this.value === 'O'){ window.location.href='/occu_parking/{{ spot.id }}'; }">
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button type="submit" class="btn btn-primary">Delete</button>
+                        <a href="/admin" class="btn btn-primary">Close</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

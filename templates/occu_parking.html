@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Occupied Parking spot details</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        #form-body {
+            height: auto;
+            width: 500px;
+            margin: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="main">
+        <div id="canvas">
+            <div id="form-body" class="mt-5">
+                <h4 class="text-center mb-4">Occupied Parking Spot Details</h4>
+
+                <div class="mb-3">
+                    <label class="form-label">ID :</label>
+                    <input type="text" class="form-control text-center" value="{{ spot.id }}" readonly>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Customer ID :</label>
+                    <input type="text" class="form-control text-center" value="{{ reservation.user_id }}" readonly>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Vehicle Number :</label>
+                    <input type="text" class="form-control text-center" value="{{ reservation.vehicle_number }}"
+                        readonly>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Date/Time of Parking :</label>
+                    <input type="text" class="form-control text-center"
+                        value="{{ reservation.parking_timestamp.strftime('%d/%m/%Y %H:%M') }}" readonly>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Est. Parking Cost :</label>
+                    <input type="text" class="form-control text-center" value="₹ {{ reservation.parking_cost }}"
+                        readonly>
+                </div>
+
+                <div class="text-center mt-4">
+                    <a href="/admin_dash" class="btn btn-primary">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>

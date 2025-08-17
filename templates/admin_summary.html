@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Summary Admin</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="main">
+        <div id="canvas" class="overflow-auto">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
+                <div class="container-fluid">
+                    <a class="navbar-brand " href="#">Welcome {{ this_user.fullname }}</a>
+
+                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/admin">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/users">Users</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/admin_summary">Summary</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/logout">Logout</a>
+                            </li>
+                        </ul>
+
+                        <form class="d-flex align-items-center" method="GET" action="/admin">
+                            <select name="filter_by" class="form-select me-2" style="width: 140px;">
+                                <option value="location">Location</option>
+                                <option value="pincode">Pin Code</option>
+                            </select>
+                            <input type="text" name="search_text" class="form-control me-2" placeholder="Search here">
+                            <button class="btn btn-primary" type="submit">Search</button>
+                        </form>
+                        <a class="btn btn-outline-primary ms-3" href="/edit_profile/{{ this_user.id }}">Edit Profile</a>
+                    </div>
+                </div>
+            </nav>
+            <!-- <div id="content">
+                <h3> Summary</h3>
+                <div class=" d-flex justify-content-around text-center" style="margin-top: 40px;;">
+                    <div class="card bg-info p-3">
+                        <h3> Available lots</h3>
+                        <h5>Delhi-{{ad}}</h5>
+                        <h5>New Delhi-{{an}}</h5>
+                        <h5>Muzaffarpur-{{am}}</h5>
+                        <h5>Vrindavan-{{av}}</h5>
+                    </div>
+                    <div class="card bg-info p-3">
+                        <h3>Occupied lots</h3>
+                        <h5>Delhi-{{od}}</h5>
+                        <h5>New Delhi-{{on}}</h5>
+                        <h5>Muzaffarpur-{{om}}</h5>
+                        <h5>Vrindavan-{{ov}}</h5>
+                    </div>
+                    
+                </div>
+                <div class="my-2">
+                    <h3 class="mx-2"> Revenue from each Parking Lot</h3>
+                    <img src="/static/revenue_bar.png" alt="Bar Chart">
+                </div>
+
+                <div class="my-2">
+                    <h3 class ="mx-2">Summary of Parking Spot Status</h3>
+                    <img src="/static/spot_status_pie.png" alt="Pie Chart">
+                </div>
+            </div> -->
+
+
+
+            <h3 class="text-center mt-4">Admin Parking Summary</h3>
+
+            <div class="row my-4">
+                <!-- <h5 class="text-center">Available vs Occupied Spots</h5> -->
+                <img src="/static/lot_status_bar.png" class="img-fluid" alt="Bar Chart">
+            </div>
+
+            <div class="row my-4">
+                <!-- <h5 class="text-center">Revenue by Lot</h5> -->
+                <img src="/static/revenue_pie.png" class="img-fluid" alt="Pie Chart">
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
+
